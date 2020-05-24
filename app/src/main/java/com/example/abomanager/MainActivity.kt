@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
 @Composable
 fun Greeting(name: String) {
-    Text(text = "Hallo $name!")
+    Text(text = "Hallo Android Master $name!")
 }
 
 @Preview
