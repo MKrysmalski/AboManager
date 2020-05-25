@@ -1,0 +1,11 @@
+------------------------------------------------------------------
+Temporary changelog
+------------------------------------------------------------------
+Date: 25.05.2020
+
+Changes:
+- Moved classes ordner to main.java. (res only for xml, not kt data)
+- Changed jetbrain version from .03 to .09
+    - Text is now found under foundation, not core anymore
+------------------------------------------------------------------
+
