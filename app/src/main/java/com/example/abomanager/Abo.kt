@@ -4,12 +4,12 @@ import java.util.Date
 import java.util.Calendar
 
 class Abo{
-    private var name : String = ""                                     //Name of the abonnement
-    private var abo_variant : Int = -1                                 //Period time span in days
-    private var cost : Double = 0.0                                    //The amount needed to be paid per period
-    private var starting_day : Date = Calendar.getInstance().getTime() //The abonnement starting day
-    private var run_time : Int = 1                                     //The runtime in given periods
-    private var color : String = "FFFFFF"                              //Color is given in hexadecimal
+    public var name : String = ""                                     //Name of the abonnement
+    public var abo_variant : Int = -1                                 //Period time span in days
+    public var cost : Double = 0.0                                    //The amount needed to be paid per period
+    public var starting_day : Date = Calendar.getInstance().getTime() //The abonnement starting day
+    public var run_time : Int = 1                                     //The runtime in given periods
+    public var color : String = "FFFFFF"                              //Color is given in hexadecimal
 
     //region "Add Functionality"
     public fun Add_Name(name : String){
