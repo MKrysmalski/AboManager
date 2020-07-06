@@ -2,10 +2,12 @@ package com.example.abomanager
 
 import androidx.compose.Composable
 import androidx.compose.remember
+import androidx.ui.foundation.Icon
 import androidx.ui.foundation.Text
 import androidx.ui.material.Button
 import androidx.ui.material.Scaffold
 import androidx.ui.material.ScaffoldState
+import androidx.ui.res.vectorResource
 
 @Composable
 fun HomeScreen(scaffoldState: ScaffoldState = remember { ScaffoldState() }) {
@@ -32,7 +34,7 @@ fun HomeScreen(scaffoldState: ScaffoldState = remember { ScaffoldState() }) {
             Button(onClick = {
                 Status.currentScreen = Screen.Home
             }) {
-                Text("Home");
+                Icon(vectorResource(R.drawable.ic_baseline_home_24));
             }
             Button(onClick = {
                 Status.currentScreen = Screen.AboControl
@@ -42,7 +44,7 @@ fun HomeScreen(scaffoldState: ScaffoldState = remember { ScaffoldState() }) {
             Button(onClick = {
                 Status.currentScreen = Screen.Profil
             }) {
-                Text("Profil");
+                Icon(vectorResource(R.drawable.ic_baseline_home_24));
             }
         }
 
