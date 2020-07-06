@@ -2,8 +2,11 @@ package com.example.abomanager
 
 import androidx.compose.Composable
 import androidx.compose.remember
+import androidx.ui.core.Modifier
+import androidx.ui.foundation.Box
 import androidx.ui.foundation.Icon
 import androidx.ui.foundation.Text
+import androidx.ui.layout.ColumnScope.weight
 import androidx.ui.material.*
 import androidx.ui.material.icons.Icons
 import androidx.ui.material.icons.filled.ArrowBack
@@ -34,7 +37,9 @@ fun AboControlScreen(scaffoldState: ScaffoldState = remember { ScaffoldState() }
                 })
         },
         bodyContent = {
-            Text("Empty Abo Control")
+            Box(modifier = Modifier.weight(1f)) {
+                AbosList(listOf(AboViewModel("Netflix"), AboViewModel("Disney"), AboViewModel("Burger King")))
+            }
         }
     )
 }
