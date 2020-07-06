@@ -20,17 +20,17 @@ fun HomeScreen(scaffoldState: ScaffoldState = remember { ScaffoldState() }) {
                     Button(onClick = {
                         Status.currentScreen=Screen.Statistics
                     }){
-                        Text("Statistics")
+                        Icon(vectorResource(R.drawable.ic_baseline_bar_chart_24))
                     }
                     Button(onClick = {
                         Status.currentScreen=Screen.AboControl
                     }) {
-                        Text("AboControl")
+                        Icon(vectorResource(R.drawable.ic_baseline_view_list_24))
                     }
                     Button(onClick = {
                         Status.currentScreen=Screen.Profil
                     }) {
-                        Text("Profile")
+                        Icon(vectorResource(R.drawable.ic_baseline_account_circle_24))
                     }
                 })
 
