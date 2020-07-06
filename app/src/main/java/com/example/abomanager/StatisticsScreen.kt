@@ -13,7 +13,8 @@ fun StatisticsScreen(scaffoldState: ScaffoldState = remember { ScaffoldState() }
     Scaffold(
         scaffoldState = scaffoldState,
         topAppBar = {
-            TopAppBar(title = { Text(text = "Statistics") },
+            TopAppBar(
+                title = { Text(text = "Statistics") },
                 actions = {
                     Button(onClick = {
                         Status.currentScreen=Screen.Home
@@ -34,33 +35,6 @@ fun StatisticsScreen(scaffoldState: ScaffoldState = remember { ScaffoldState() }
         },
         bodyContent = {
             Text("Empty Statistics")
-        },
-        bottomAppBar = {
-            Button(onClick = {
-                Status.currentScreen = Screen.Statistics
-            }) {
-                Text("Statistics");
-            }
-            Button(onClick = {
-                Status.currentScreen = Screen.Statistics
-            }) {
-                Text("Navigate");
-            }
-            Button(onClick = {
-                Status.currentScreen = Screen.Home
-            }) {
-                Text("Home");
-            }
-            Button(onClick = {
-                Status.currentScreen = Screen.AboControl
-            }) {
-                Text("AboControl");
-            }
-            Button(onClick = {
-                Status.currentScreen = Screen.Profil
-            }) {
-                Text("Profil");
-            }
         }
     )
 }
