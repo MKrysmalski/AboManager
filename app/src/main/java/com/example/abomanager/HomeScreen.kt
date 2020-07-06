@@ -16,13 +16,24 @@ fun HomeScreen(scaffoldState: ScaffoldState = remember { ScaffoldState() }) {
         scaffoldState = scaffoldState,
         topAppBar = {
             TopAppBar(title = { Text(text = "Home") },
-                navigationIcon = {
-                    IconButton(onClick = {
-                        Status.currentScreen = Screen.Home
+                actions = {
+                    Button(onClick = {
+                        Status.currentScreen=Screen.Statistics
+                    }){
+                        Text("Statistics")
+                    }
+                    Button(onClick = {
+                        Status.currentScreen=Screen.AboControl
                     }) {
-                        Icon(Icons.Filled.ArrowBack)
+                        Text("AboControl")
+                    }
+                    Button(onClick = {
+                        Status.currentScreen=Screen.Profil
+                    }) {
+                        Text("Profile")
                     }
                 })
+
         },
         bodyContent = {
             Text("Empty Home Screen")
