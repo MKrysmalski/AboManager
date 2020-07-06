@@ -39,7 +39,7 @@ fun HomeScreen(scaffoldState: ScaffoldState = remember { ScaffoldState() }) {
             Button(onClick = {
                 Status.currentScreen = Screen.AboControl
             }) {
-                Text("AboControl");
+                Icon(vectorResource(R.drawable.ic_baseline_home_24));
             }
             Button(onClick = {
                 Status.currentScreen = Screen.Profil
