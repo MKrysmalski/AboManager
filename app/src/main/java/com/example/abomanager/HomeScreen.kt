@@ -1,12 +1,13 @@
 package com.example.abomanager
 
+import android.icu.text.CaseMap
 import androidx.compose.Composable
 import androidx.compose.remember
 import androidx.ui.foundation.Icon
 import androidx.ui.foundation.Text
-import androidx.ui.material.Button
-import androidx.ui.material.Scaffold
-import androidx.ui.material.ScaffoldState
+import androidx.ui.material.*
+import androidx.ui.material.icons.Icons
+import androidx.ui.material.icons.filled.ArrowBack
 import androidx.ui.res.vectorResource
 
 @Composable
@@ -14,8 +15,14 @@ fun HomeScreen(scaffoldState: ScaffoldState = remember { ScaffoldState() }) {
     Scaffold(
         scaffoldState = scaffoldState,
         topAppBar = {
-
-            Text("Home Screen")
+            TopAppBar(title = { Text(text = "Home") },
+                navigationIcon = {
+                    IconButton(onClick = {
+                        Status.currentScreen = Screen.Home
+                    }) {
+                        Icon(Icons.Filled.ArrowBack)
+                    }
+                })
         },
         bodyContent = {
             Text("Empty Home Screen")
