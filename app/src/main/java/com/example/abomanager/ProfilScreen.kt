@@ -4,37 +4,49 @@ import androidx.compose.Composable
 import androidx.compose.remember
 import androidx.ui.foundation.Icon
 import androidx.ui.foundation.Text
+import androidx.ui.graphics.Color
 import androidx.ui.material.*
 import androidx.ui.material.icons.Icons
 import androidx.ui.material.icons.filled.ArrowBack
 import androidx.ui.res.vectorResource
 
 @Composable
-fun ProfilScreen(scaffoldState: ScaffoldState = remember { ScaffoldState() }) {
+fun ProfilScreen(viewModel: MainViewModel, scaffoldState: ScaffoldState = remember { ScaffoldState() }) {
     Scaffold(
         scaffoldState = scaffoldState,
+
         topAppBar = {
-            TopAppBar(title = { Text(text = "Profile") },
-                actions = {
-                    Button(onClick = {
-                        Status.currentScreen=Screen.Home
-                    }){
-                        Icon(vectorResource(R.drawable.ic_baseline_home_24))
-                    }
-                    Button(onClick = {
-                        Status.currentScreen=Screen.Statistics
-                    }) {
-                        Icon(vectorResource(R.drawable.ic_baseline_bar_chart_24))
-                    }
-                    Button(onClick = {
-                        Status.currentScreen=Screen.AboControl
-                    }) {
-                        Icon(vectorResource(R.drawable.ic_baseline_view_list_24))
-                    }
-                })
+            TopAppBar(title = { Text("Profile") })
         },
+
         bodyContent = {
             Text("Empty ProfilScreen")
+        },
+
+        bottomAppBar = {
+            BottomAppBar(
+                backgroundColor = Color.DarkGray) {
+                Button(onClick = {
+                    Status.currentScreen=Screen.Home(viewModel)
+                }, modifier = navButtonPadding, backgroundColor = Color.White){
+                    Icon(vectorResource(R.drawable.ic_baseline_home_24))
+                }
+                Button(onClick = {
+                    Status.currentScreen=Screen.AboControl(viewModel)
+                }, modifier = navButtonPadding, backgroundColor = Color.White) {
+                    Icon(vectorResource(R.drawable.ic_baseline_view_list_24))
+                }
+                Button(onClick = {
+                    Status.currentScreen=Screen.Profil(viewModel)
+                }, modifier = navButtonPadding, backgroundColor = Color.White) {
+                    Icon(vectorResource(R.drawable.ic_baseline_account_circle_24))
+                }
+                Button(onClick = {
+                    Status.currentScreen=Screen.Statistics(viewModel)
+                }, modifier = navButtonPadding, backgroundColor = Color.White) {
+                    Icon(vectorResource(R.drawable.ic_baseline_bar_chart_24))
+                }
+            }
         }
     )
 }

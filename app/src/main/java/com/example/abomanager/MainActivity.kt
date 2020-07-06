@@ -13,8 +13,6 @@ import androidx.ui.tooling.preview.Preview
 import androidx.ui.unit.dp
 
 class MainActivity : AppCompatActivity() {
-    private val viewModel = MainViewModel()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -30,10 +28,10 @@ private fun MainContent() {
     Crossfade(Status.currentScreen) { screen ->
         Surface(color = MaterialTheme.colors.background) {
             when (screen) {
-                is Screen.Home -> HomeScreen()
-                is Screen.Profil -> ProfilScreen()
-                is Screen.AboControl -> AboControlScreen()
-                is Screen.Statistics -> StatisticsScreen()
+                is Screen.Home -> HomeScreen(screen.viewModel)
+                is Screen.Profil -> ProfilScreen(screen.viewModel)
+                is Screen.AboControl -> AboControlScreen(screen.viewModel)
+                is Screen.Statistics -> StatisticsScreen(screen.viewModel)
             }
         }
     }
