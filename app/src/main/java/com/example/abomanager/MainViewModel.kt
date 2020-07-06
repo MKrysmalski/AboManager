@@ -4,9 +4,6 @@ import androidx.compose.Model
 
 @Model
 class MainViewModel {
-
-
-
     fun reset(){
 
     }

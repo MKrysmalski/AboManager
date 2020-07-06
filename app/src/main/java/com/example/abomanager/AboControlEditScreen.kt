@@ -18,3 +18,7 @@ fun AboControlEditScreen(scaffoldState: ScaffoldState = remember { ScaffoldState
         }
     )
 }
+
+fun SubmitAbo(abo: Abo){
+
+}
