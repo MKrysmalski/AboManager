@@ -7,7 +7,7 @@ class AboList {
     val aboList = mutableListOf<Abo>()
 
     public fun AddAbo(abo: Abo){
-        aboList.add(abo);
+        aboList.add(abo)
     }
 
     public fun RemoveAbo(aboName: String){
