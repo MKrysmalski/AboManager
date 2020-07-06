@@ -16,7 +16,7 @@ fun ProfilScreen(scaffoldState: ScaffoldState = remember { ScaffoldState() }) {
             TopAppBar(title = { Text(text = "Profile") },
                 actions = {
                     Button(onClick = {
-                        Status.currentScreen=Screen.Profil
+                        Status.currentScreen=Screen.Home
                     }){
                         Text("Home")
                     }
