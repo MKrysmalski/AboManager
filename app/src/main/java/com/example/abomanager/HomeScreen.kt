@@ -31,35 +31,13 @@ fun HomeScreen(viewModel: MainViewModel, scaffoldState: ScaffoldState = remember
             Stack(modifier = Modifier.fillMaxSize().padding(8.dp)){
                 Text(text = "Empty Home Screen")
                 Column(Modifier.gravity(Alignment.BottomCenter)) {
-                    Text(viewModel.name);
+                    Text("klasse");
                 }
             }
         },
 
         bottomAppBar = {
-            BottomAppBar(
-                backgroundColor = Color.DarkGray) {
-                Button(onClick = {
-                    Status.currentScreen=Screen.Home(viewModel)
-                }, modifier = navButtonPadding, backgroundColor = Color.White){
-                    Icon(vectorResource(R.drawable.ic_baseline_home_24))
-                }
-                Button(onClick = {
-                    Status.currentScreen=Screen.AboControl(viewModel)
-                }, modifier = navButtonPadding, backgroundColor = Color.White) {
-                    Icon(vectorResource(R.drawable.ic_baseline_view_list_24))
-                }
-                Button(onClick = {
-                    Status.currentScreen=Screen.Profil(viewModel)
-                }, modifier = navButtonPadding, backgroundColor = Color.White) {
-                    Icon(vectorResource(R.drawable.ic_baseline_account_circle_24))
-                }
-                Button(onClick = {
-                    Status.currentScreen=Screen.Statistics(viewModel)
-                }, modifier = navButtonPadding, backgroundColor = Color.White) {
-                    Icon(vectorResource(R.drawable.ic_baseline_bar_chart_24))
-                }
-            }
+            BotNavigation(vModel = viewModel)
         }
 
 

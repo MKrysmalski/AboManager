@@ -30,29 +30,7 @@ fun StatisticsScreen(viewModel: MainViewModel, scaffoldState: ScaffoldState = re
         },
 
         bottomAppBar = {
-            BottomAppBar(
-                backgroundColor = Color.DarkGray) {
-                Button(onClick = {
-                    Status.currentScreen=Screen.Home(viewModel)
-                }, modifier = navButtonPadding, backgroundColor = Color.White){
-                    Icon(vectorResource(R.drawable.ic_baseline_home_24))
-                }
-                Button(onClick = {
-                    Status.currentScreen=Screen.AboControl(viewModel)
-                }, modifier = navButtonPadding, backgroundColor = Color.White) {
-                    Icon(vectorResource(R.drawable.ic_baseline_view_list_24))
-                }
-                Button(onClick = {
-                    Status.currentScreen=Screen.Profil(viewModel)
-                }, modifier = navButtonPadding, backgroundColor = Color.White) {
-                    Icon(vectorResource(R.drawable.ic_baseline_account_circle_24))
-                }
-                Button(onClick = {
-                    Status.currentScreen=Screen.Statistics(viewModel)
-                }, modifier = navButtonPadding, backgroundColor = Color.White) {
-                    Icon(vectorResource(R.drawable.ic_baseline_bar_chart_24))
-                }
-            }
+            BotNavigation(vModel = viewModel)
         }
 
     )

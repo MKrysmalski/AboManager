@@ -3,20 +3,19 @@ package com.example.abomanager
 import java.util.Collections
 import java.util.Collections.list
 
-class AboList {
-    val aboList = mutableListOf<Abo>()
+class AboList(val aboList: MutableList<AboViewModel>) {
 
-    public fun AddAbo(abo: Abo){
+    public fun AddAbo(abo: AboViewModel){
         aboList.add(abo)
     }
 
     public fun RemoveAbo(aboName: String){
         var zaehler: Int = 0
 
-        for(Abo in aboList){
+        for(AboViewModel in aboList){
             zaehler++
 
-            if(Abo.name == aboName) {
+            if(AboViewModel.name == aboName) {
                 zaehler
                 break;
             }
