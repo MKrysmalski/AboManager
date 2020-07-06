@@ -14,11 +14,21 @@ fun StatisticsScreen(scaffoldState: ScaffoldState = remember { ScaffoldState() }
         scaffoldState = scaffoldState,
         topAppBar = {
             TopAppBar(title = { Text(text = "Statistics") },
-                navigationIcon = {
-                    IconButton(onClick = {
-                        Status.currentScreen = Screen.Home
+                actions = {
+                    Button(onClick = {
+                        Status.currentScreen=Screen.Home
+                    }){
+                        Text("Home")
+                    }
+                    Button(onClick = {
+                        Status.currentScreen=Screen.AboControl
                     }) {
-                        Icon(Icons.Filled.ArrowBack)
+                        Text("AboControl")
+                    }
+                    Button(onClick = {
+                        Status.currentScreen=Screen.Profil
+                    }) {
+                        Text("Profile")
                     }
                 })
         },

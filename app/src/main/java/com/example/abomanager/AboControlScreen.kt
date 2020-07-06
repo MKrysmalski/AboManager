@@ -4,10 +4,7 @@ import androidx.compose.Composable
 import androidx.compose.remember
 import androidx.ui.foundation.Icon
 import androidx.ui.foundation.Text
-import androidx.ui.material.IconButton
-import androidx.ui.material.Scaffold
-import androidx.ui.material.ScaffoldState
-import androidx.ui.material.TopAppBar
+import androidx.ui.material.*
 import androidx.ui.material.icons.Icons
 import androidx.ui.material.icons.filled.ArrowBack
 
@@ -16,12 +13,22 @@ fun AboControlScreen(scaffoldState: ScaffoldState = remember { ScaffoldState() }
     Scaffold(
         scaffoldState = scaffoldState,
         topAppBar = {
-            TopAppBar(title = { Text(text = "Abo Control") },
-                navigationIcon = {
-                    IconButton(onClick = {
-                        Status.currentScreen = Screen.Home
+            TopAppBar(title = { Text(text = "AboControl") },
+                actions = {
+                    Button(onClick = {
+                        Status.currentScreen=Screen.Home
+                    }){
+                        Text("Home")
+                    }
+                    Button(onClick = {
+                        Status.currentScreen=Screen.Statistics
                     }) {
-                        Icon(Icons.Filled.ArrowBack)
+                        Text("Statistics")
+                    }
+                    Button(onClick = {
+                        Status.currentScreen=Screen.Profil
+                    }) {
+                        Text("Profile")
                     }
                 })
         },

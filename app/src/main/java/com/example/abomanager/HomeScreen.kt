@@ -37,34 +37,8 @@ fun HomeScreen(scaffoldState: ScaffoldState = remember { ScaffoldState() }) {
         },
         bodyContent = {
             Text("Empty Home Screen")
-        },
-        bottomAppBar = {
-            Button(onClick = {
-                Status.currentScreen = Screen.Statistics
-            }) {
-                Icon(vectorResource(R.drawable.ic_baseline_bar_chart_24));
-            }
-            Button(onClick = {
-                Status.currentScreen = Screen.Statistics
-            }) {
-                Icon(vectorResource(R.drawable.ic_baseline_bar_chart_24));
-            }
-            Button(onClick = {
-                Status.currentScreen = Screen.Home
-            }) {
-                Icon(vectorResource(R.drawable.ic_baseline_home_24));
-            }
-            Button(onClick = {
-                Status.currentScreen = Screen.AboControl
-            }) {
-                Icon(vectorResource(R.drawable.ic_baseline_view_list_24));
-            }
-            Button(onClick = {
-                Status.currentScreen = Screen.Profil
-            }) {
-                Icon(vectorResource(R.drawable.ic_baseline_account_circle_24));
-            }
         }
+
 
     )
 }
