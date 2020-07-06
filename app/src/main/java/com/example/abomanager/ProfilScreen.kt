@@ -7,6 +7,7 @@ import androidx.ui.foundation.Text
 import androidx.ui.material.*
 import androidx.ui.material.icons.Icons
 import androidx.ui.material.icons.filled.ArrowBack
+import androidx.ui.res.vectorResource
 
 @Composable
 fun ProfilScreen(scaffoldState: ScaffoldState = remember { ScaffoldState() }) {
@@ -18,17 +19,17 @@ fun ProfilScreen(scaffoldState: ScaffoldState = remember { ScaffoldState() }) {
                     Button(onClick = {
                         Status.currentScreen=Screen.Home
                     }){
-                        Text("Home")
+                        Icon(vectorResource(R.drawable.ic_baseline_home_24))
                     }
                     Button(onClick = {
                         Status.currentScreen=Screen.Statistics
                     }) {
-                        Text("Statistics")
+                        Icon(vectorResource(R.drawable.ic_baseline_bar_chart_24))
                     }
                     Button(onClick = {
                         Status.currentScreen=Screen.AboControl
                     }) {
-                        Text("AboControl")
+                        Icon(vectorResource(R.drawable.ic_baseline_view_list_24))
                     }
                 })
         },

@@ -32,8 +32,8 @@ fun HomeScreen(scaffoldState: ScaffoldState = remember { ScaffoldState() }) {
                     }) {
                         Icon(vectorResource(R.drawable.ic_baseline_account_circle_24))
                     }
-                })
-
+                }
+            )
         },
         bodyContent = {
             Text("Empty Home Screen")

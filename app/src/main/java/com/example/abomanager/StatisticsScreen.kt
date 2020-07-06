@@ -7,6 +7,7 @@ import androidx.ui.foundation.Text
 import androidx.ui.material.*
 import androidx.ui.material.icons.Icons
 import androidx.ui.material.icons.filled.ArrowBack
+import androidx.ui.res.vectorResource
 
 @Composable
 fun StatisticsScreen(scaffoldState: ScaffoldState = remember { ScaffoldState() }) {
@@ -19,17 +20,17 @@ fun StatisticsScreen(scaffoldState: ScaffoldState = remember { ScaffoldState() }
                     Button(onClick = {
                         Status.currentScreen=Screen.Home
                     }){
-                        Text("Home")
+                        Icon(vectorResource(R.drawable.ic_baseline_home_24))
                     }
                     Button(onClick = {
                         Status.currentScreen=Screen.AboControl
                     }) {
-                        Text("AboControl")
+                        Icon(vectorResource(R.drawable.ic_baseline_view_list_24))
                     }
                     Button(onClick = {
                         Status.currentScreen=Screen.Profil
                     }) {
-                        Text("Profile")
+                        Icon(vectorResource(R.drawable.ic_baseline_account_circle_24))
                     }
                 })
         },
