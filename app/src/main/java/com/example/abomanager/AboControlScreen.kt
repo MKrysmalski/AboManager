@@ -19,7 +19,15 @@ fun AboControlScreen(viewModel: MainViewModel, scaffoldState: ScaffoldState = re
         scaffoldState = scaffoldState,
 
         topAppBar = {
-          TopAppBar(title = { Text("Subscriptions") })
+          TopAppBar(
+              title = { Text("Subscriptions") },
+              navigationIcon = {
+                  IconButton(onClick = {
+                      Status.currentScreen = Screen.AboControlEdit(viewModel)
+                  }) {
+                      Icon(vectorResource(R.drawable.ic_baseline_home_24))
+                  }
+              })
         },
 
         bodyContent = {
