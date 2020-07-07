@@ -1,5 +1,7 @@
 package com.example.abomanager
 
+import kotlin.math.round
+
 class Calculator(abos: List<AboViewModel>) {
     val list = abos
     var average: Double = -1.0
@@ -80,6 +82,12 @@ class Calculator(abos: List<AboViewModel>) {
             tmp+=it.costsPerDay
             abo.PercentageCost=100/tmp*abo.costsPerDay
         }
+    }
+
+    fun Double.round(decimals: Int): Double {
+        var multiplier = 1.0
+        repeat(decimals) { multiplier *= 10 }
+        return round(this * multiplier) / multiplier
     }
 }
 
