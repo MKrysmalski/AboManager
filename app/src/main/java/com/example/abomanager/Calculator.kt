@@ -44,7 +44,7 @@ class Calculator(abos: List<AboViewModel>) {
         var tmp: Double = 0.0
         list.forEach {
             //Compare Highest with tmp
-            if(tmp<it.costsPerDay){
+            if(tmp>it.costsPerDay){
                 tmp=it.costsPerDay
             }
         }
@@ -56,7 +56,7 @@ class Calculator(abos: List<AboViewModel>) {
     fun GetHighest(abo:AboViewModel):Double{
         var tmp: Double = abo.costsPerDay
         list.forEach {
-            if(tmp>it.costsPerDay){
+            if(tmp<it.costsPerDay){
                 tmp=it.costsPerDay
             }
         }
