@@ -35,7 +35,6 @@ fun HomeScreen(viewModel: MainViewModel, scaffoldState: ScaffoldState = remember
                 }
             }
         },
-
         bottomAppBar = {
             BotNavigation(vModel = viewModel)
         }
