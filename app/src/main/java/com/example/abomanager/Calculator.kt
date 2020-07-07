@@ -18,19 +18,19 @@ class Calculator(abos: List<AboViewModel>) {
     }
 
     //The cost from one subscription in the complete period
-    fun TotalCostPerDay(abo: AboViewModel){
+    fun CostPerDay(abo: AboViewModel){
         abo.costsPerDay=abo.cost/abo.abo_variant
     }
 
-    fun TotalCostPerWeek(abo: AboViewModel){
+    fun CostPerWeek(abo: AboViewModel){
         abo.costsPerWeek=abo.costsPerDay*7
     }
 
-    fun TotalCostPerMonth(abo: AboViewModel){
+    fun CostPerMonth(abo: AboViewModel){
         abo.costsPerMonth=abo.costsPerDay*30
     }
 
-    fun TotalCostPerYear(abo: AboViewModel){
+    fun CostPerYear(abo: AboViewModel){
         abo.costsPerYear=abo.costsPerDay*365
     }
 
