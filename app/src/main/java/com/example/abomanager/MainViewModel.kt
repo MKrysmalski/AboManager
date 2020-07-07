@@ -9,6 +9,7 @@ class MainViewModel {
     //This should maybe be read from a file
     val list = mutableListOf<AboViewModel>()
     val abos = AboList(list)
+    val stats = Calculator(list)
 
     constructor() {
         list.add(AboViewModel("Netflix", 1,1.0, Calendar.getInstance().getTime(),1,"#053225"))
