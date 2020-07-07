@@ -68,7 +68,7 @@ class Calculator(abos: List<AboViewModel>) {
     fun GetAverage():Double{
         var tmp:Double=0.0
         list.forEach {
-            tmp+=it.costsPerDay
+            tmp+=it.costsPerMonth
             }
         average=tmp/list.size
         return tmp/list.size
