@@ -1,5 +1,7 @@
 package com.example.abomanager
 
+import kotlin.math.round
+
 class Calculator(abos: List<AboViewModel>) {
     val list = abos
     var average: Double = -1.0
@@ -27,6 +29,7 @@ class Calculator(abos: List<AboViewModel>) {
         abo.costsPerDay=abo.cost/abo.abo_variant
     }
 
+
     fun CostPerWeek(abo: AboViewModel){
         abo.costsPerWeek=abo.costsPerDay*7
     }
@@ -36,7 +39,7 @@ class Calculator(abos: List<AboViewModel>) {
     }
 
     fun CostPerYear(abo: AboViewModel){
-        abo.costsPerYear=abo.costsPerDay*365
+        abo.costsPerYear=abo.costsPerDay*360
     }
 
     //The subscription with the highest cost
