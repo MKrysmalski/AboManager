@@ -84,5 +84,11 @@ class Calculator(abos: List<AboViewModel>) {
             abo.PercentageCost=100/tmp*abo.costsPerDay
         }
     }
+
+    fun Double.round(decimals: Int): Double {
+        var multiplier = 1.0
+        repeat(decimals) { multiplier *= 10 }
+        return round(this * multiplier) / multiplier
+    }
 }
 
