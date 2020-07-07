@@ -23,9 +23,10 @@ class MainViewModel {
         list.add(AboViewModel("Netflix", 1,2.0, Calendar.getInstance().getTime(),1,"#053225"))
         UpdateAbo(list[list.count()-1])
 
-        stats.CostPerDay(list[0])
 
-        stats.TotalSumPerDay()
+        list.forEach {
+           UpdateAbo(it)
+        }
     }
 
     fun UpdateList() {
@@ -38,5 +39,10 @@ class MainViewModel {
         stats.CostPerMonth(abo)
         stats.CostPerWeek(abo)
         stats.GetPercentages(abo)
+        stats.TotalSumPerDay()
+        stats.GetHighest(abo)
+        stats.GetLowest()
+        stats.GetPercentages(abo)
+        stats.GetAverage()
     }
 }
