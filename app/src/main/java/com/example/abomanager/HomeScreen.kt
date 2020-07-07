@@ -16,6 +16,7 @@ import androidx.ui.material.*
 import androidx.ui.material.icons.Icons
 import androidx.ui.material.icons.filled.ArrowBack
 import androidx.ui.res.vectorResource
+import androidx.ui.text.style.TextOverflow
 import androidx.ui.unit.dp
 
 @Composable
@@ -29,10 +30,26 @@ fun HomeScreen(viewModel: MainViewModel, scaffoldState: ScaffoldState = remember
 
         bodyContent = {
             Stack(modifier = Modifier.fillMaxSize().padding(8.dp)){
-                Text(text = "Empty Home Screen")
+                Text(text = "")
                 Column(Modifier.gravity(Alignment.BottomCenter)) {
                     Text("klasse");
                 }
+            }
+            MaterialTheme() {
+                val typography = MaterialTheme.typography
+                Column(
+                    modifier = Modifier.padding(1.dp,0.dp,0.dp,0.dp)
+                    ) {
+                        Text(
+                            "Cost per Month:",
+                            style = typography.h6,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis
+                        )
+                        Text("Filler Text",
+                            style = typography.body2
+                        )
+                    }
             }
         },
         bottomAppBar = {
