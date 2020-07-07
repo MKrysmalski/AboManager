@@ -2,9 +2,10 @@ package com.example.abomanager
 
 class Calculator(abos: List<AboViewModel>) {
     val list = abos
-    var average: Double = 0.0
-    var highest: Double = 0.0
-    var lowest: Double = 0.0
+    var average: Double = -1.0
+    var highest: Double = -1.0
+    var lowest: Double = -1.0
+    var TotalSum:Double=-1.0
 
 
 
@@ -15,22 +16,23 @@ class Calculator(abos: List<AboViewModel>) {
             //Compare Highest with tmp
             tmp+=it.costsPerDay;
         }
+        TotalSum=tmp;
     }
 
     //The cost from one subscription in the complete period
-    fun TotalCostPerDay(abo: AboViewModel){
+    fun CostPerDay(abo: AboViewModel){
         abo.costsPerDay=abo.cost/abo.abo_variant
     }
 
-    fun TotalCostPerWeek(abo: AboViewModel){
+    fun CostPerWeek(abo: AboViewModel){
         abo.costsPerWeek=abo.costsPerDay*7
     }
 
-    fun TotalCostPerMonth(abo: AboViewModel){
+    fun CostPerMonth(abo: AboViewModel){
         abo.costsPerMonth=abo.costsPerDay*30
     }
 
-    fun TotalCostPerYear(abo: AboViewModel){
+    fun CostPerYear(abo: AboViewModel){
         abo.costsPerYear=abo.costsPerDay*365
     }
 

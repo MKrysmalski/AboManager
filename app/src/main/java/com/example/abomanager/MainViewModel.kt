@@ -19,6 +19,10 @@ class MainViewModel {
         list.add(AboViewModel("Hauser"))
         list.add(AboViewModel("George"))
         list.add(AboViewModel("Peter Pan"))
+
+        stats.CostPerDay(list[0])
+
+        stats.TotalSumPerDay()
     }
 
     fun UpdateList() {
