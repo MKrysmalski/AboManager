@@ -13,15 +13,15 @@ class MainViewModel {
 
     constructor() {
         list.add(AboViewModel("Netflix", 1,2.0, Calendar.getInstance().getTime(),1,"#053225"))
-        UpdateAbo(list[list.count()])
+        UpdateAbo(list[list.count()-1])
         list.add(AboViewModel("Netflix", 1,5.3, Calendar.getInstance().getTime(),1,"#053225"))
-        UpdateAbo(list[list.count()])
+        UpdateAbo(list[list.count()-1])
         list.add(AboViewModel("Netflix", 1,4.0, Calendar.getInstance().getTime(),1,"#053225"))
-        UpdateAbo(list[list.count()])
-        list.add(AboViewModel("Netflix", 1,10.2, Calendar.getInstance().getTime(),1,"#053225"))
-        UpdateAbo(list[list.count()])
+        UpdateAbo(list[list.count()-1])
+        list.add(AboViewModel("Netflix", 10,10.2, Calendar.getInstance().getTime(),1,"#053225"))
+        UpdateAbo(list[list.count()-1])
         list.add(AboViewModel("Netflix", 1,2.0, Calendar.getInstance().getTime(),1,"#053225"))
-        UpdateAbo(list[list.count()])
+        UpdateAbo(list[list.count()-1])
 
         stats.CostPerDay(list[0])
 
