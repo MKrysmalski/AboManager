@@ -28,4 +28,8 @@ class MainViewModel {
     fun UpdateList() {
 
     }
+
+    fun UpdateAbo() {
+        
+    }
 }

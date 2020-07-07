@@ -19,6 +19,8 @@ import androidx.ui.unit.dp
 @Composable
 fun AboControlEditScreen(viewModel: MainViewModel, scaffoldState: ScaffoldState = remember { ScaffoldState() }) {
     var tmpAbo: AboViewModel
+    var tmpName = tmpName { "" }
+    var tmpCost = tmpCost { "" }
 
     Scaffold(
         scaffoldState = scaffoldState,
@@ -43,7 +45,22 @@ fun AboControlEditScreen(viewModel: MainViewModel, scaffoldState: ScaffoldState 
                 ) {
                     Row() {
                         Text("Name:")
+                        TextField(value = tmpName, onValueChange = { tmpName.value = it })
+                    }
 
+                    Row() {
+                        Text("Variant:")
+                        TextField(value = tmpName, onValueChange = { tmpName.value = it })
+                    }
+
+                    Row() {
+                        Text("Cost:")
+                        TextField(value = tmpCost, onValueChange = { tmpName.value = it })
+                    }
+
+                    Row() {
+                        Text("Name:")
+                        TextField(value = tmpName, onValueChange = { tmpName.value = it })
                     }
                 }
             }
