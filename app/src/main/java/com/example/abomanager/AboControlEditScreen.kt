@@ -16,10 +16,15 @@ import androidx.ui.material.icons.filled.ArrowBack
 import androidx.ui.res.vectorResource
 import androidx.ui.unit.dp
 import java.util.*
-
 @Composable
 fun AboControlEditScreen(viewModel: MainViewModel, scaffoldState: ScaffoldState = remember { ScaffoldState() }) {
     val tmpAbo: AboViewModel = AboViewModel("")
+    val nameState = state { TextFieldValue("Name Here") }
+    val periodState = state { TextFieldValue("PeriodTime Here") }
+    val costState = state { TextFieldValue("Cost Here") }
+    val startState = state { TextFieldValue("StartTime Here") }
+    val timespanState = state { TextFieldValue("TimeSpan Here") }
+    val colorState = state { TextFieldValue("Colors") }
 
     Scaffold(
         scaffoldState = scaffoldState,
@@ -39,30 +44,25 @@ fun AboControlEditScreen(viewModel: MainViewModel, scaffoldState: ScaffoldState 
         },
         bodyContent = {
             MaterialTheme {
-                val nameState = state { TextFieldValue("") }
-                val periodState = state { TextFieldValue("") }
-                val costState = state { TextFieldValue("") }
-                val startState = state { TextFieldValue("") }
-                val timespanState = state { TextFieldValue("") }
-                val colorState = state { TextFieldValue("") }
                 Column(
                     modifier = Modifier.padding(16.dp).fillMaxHeight()
                 ) {
                     Column {
-                        Row() {
-                            Text("Name:")
 
-                        }
                         Row() {
-                            Text("Period:")
-                            TextField(value = periodState.value, onValueChange = { periodState.value = it })
+                            Text("Name: "+ nameState.value.text)
                         }
+                        TextField(value = nameState.value, onValueChange ={nameState.value=it} )
                         Row() {
-                            Text("Cost:")
-                            TextField(value = costState.value, onValueChange = { costState.value = it })
+                            Text("Period:" + periodState.value.text)
                         }
+                        TextField(value = periodState.value, onValueChange = { periodState.value = it })
                         Row() {
-                            Text("Starts:")
+                            Text("Cost:" + periodState.value.text)
+                        }
+                        TextField(value = costState.value, onValueChange = { costState.value = it })
+                        Row() {
+                            Text("Starts:" )
                         }
                         Row() {
                             Text("Time span:")
@@ -88,6 +88,9 @@ fun AboControlEditScreen(viewModel: MainViewModel, scaffoldState: ScaffoldState 
                         }
                         Modifier.padding(15.dp)
                         Button(onClick = {
+                            tmpAbo.name=nameState.value.text
+                            tmpAbo.cost=costState.value.text.toDouble()
+                            tmpAbo.abo_variant=periodState.value.text.toInt()
                             SubmitAbo(tmpAbo)
                         }, backgroundColor = Color.White) {
                             Icon(vectorResource(R.drawable.ic_baseline_account_circle_24))
@@ -100,8 +103,8 @@ fun AboControlEditScreen(viewModel: MainViewModel, scaffoldState: ScaffoldState 
 }
 
 fun ResetTemplate(abo: AboViewModel){
-    abo.name = ""
-    abo.abo_variant = 0
+    abo.name = "Name Here"
+    abo.abo_variant = 30
     abo.cost = 0.0
     abo.starting_day = Calendar.getInstance().getTime()
     abo.run_time = 1
@@ -109,5 +112,5 @@ fun ResetTemplate(abo: AboViewModel){
 }
 
 fun SubmitAbo(abo: AboViewModel){
-    //Check if everything is passed correctly
+
 }
