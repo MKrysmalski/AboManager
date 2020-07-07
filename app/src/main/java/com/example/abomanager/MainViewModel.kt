@@ -12,15 +12,15 @@ class MainViewModel {
     val stats = Calculator(list)
 
     constructor() {
-        list.add(AboViewModel("Netflix", 1,2.0, Calendar.getInstance().getTime(),1,"#053225"))
+        list.add(AboViewModel("Netflix", 30,15.99, Calendar.getInstance().getTime(),1,"#053225"))
         UpdateAbo(list[list.count()-1])
-        list.add(AboViewModel("Netflix", 1,5.3, Calendar.getInstance().getTime(),1,"#053225"))
+        list.add(AboViewModel("Amazon Prime", 365,34.99, Calendar.getInstance().getTime(),1,"#053225"))
         UpdateAbo(list[list.count()-1])
-        list.add(AboViewModel("Netflix", 1,4.0, Calendar.getInstance().getTime(),1,"#053225"))
+        list.add(AboViewModel("Wakanim", 90,13.99, Calendar.getInstance().getTime(),1,"#053225"))
         UpdateAbo(list[list.count()-1])
-        list.add(AboViewModel("Netflix", 10,10.2, Calendar.getInstance().getTime(),1,"#053225"))
+        list.add(AboViewModel("Crunchyroll", 365,39.99, Calendar.getInstance().getTime(),1,"#053225"))
         UpdateAbo(list[list.count()-1])
-        list.add(AboViewModel("Netflix", 1,2.0, Calendar.getInstance().getTime(),1,"#053225"))
+        list.add(AboViewModel("Disney+", 30,6.99, Calendar.getInstance().getTime(),1,"#053225"))
         UpdateAbo(list[list.count()-1])
 
         stats.CostPerDay(list[0])
