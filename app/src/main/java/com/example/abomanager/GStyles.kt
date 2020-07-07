@@ -14,7 +14,6 @@ import androidx.ui.graphics.Color
 import androidx.ui.material.Divider
 import androidx.ui.text.TextStyle
 import androidx.ui.text.style.TextDecoration
-import androidx.ui.unit.dp
 import androidx.ui.unit.ipx
 
 @Composable
