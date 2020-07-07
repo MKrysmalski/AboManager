@@ -51,35 +51,35 @@ fun StatisticsScreen(viewModel: MainViewModel, scaffoldState: ScaffoldState = re
                         style = typography.h6,
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis)
-                    Text("Filler Text",
+                    Text((viewModel.stats.TotalSum*30).toString(),
                         style = typography.body2)
                     Text(
                         "Cost per Year:",
                         style = typography.h6,
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis)
-                    Text("Filler Text",
+                    Text((viewModel.stats.TotalSum*365).toString(),
                         style = typography.body2)
                     Text(
                         "Most expensive Abo (per Month):",
                         style = typography.h6,
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis)
-                    Text("Filler Text",
+                    Text(viewModel.stats.highest.toString(),
                         style = typography.body2)
                     Text(
                         "Cheapest expensive Abo (per Month):",
                         style = typography.h6,
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis)
-                    Text("Filler Text",
+                    Text(viewModel.stats.lowest.toString(),
                         style = typography.body2)
                     Text(
                         "Average cost per Abo (per Month):",
                         style = typography.h6,
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis)
-                    Text("Filler Text",
+                    Text(viewModel.stats.average.toString(),
                         style = typography.body2)
                 }
             }

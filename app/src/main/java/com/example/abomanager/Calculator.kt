@@ -18,6 +18,9 @@ class Calculator(abos: List<AboViewModel>) {
         }
         TotalSum=tmp;
     }
+    fun AboCount():Int{
+        return list.size
+    }
 
     //The cost from one subscription in the complete period
     fun CostPerDay(abo: AboViewModel){
@@ -37,7 +40,7 @@ class Calculator(abos: List<AboViewModel>) {
     }
 
     //The subscription with the highest cost
-    fun GetLowest(){
+    fun GetLowest():Double{
         var tmp: Double = 0.0
         list.forEach {
             //Compare Highest with tmp
@@ -45,11 +48,12 @@ class Calculator(abos: List<AboViewModel>) {
                 tmp=it.costsPerDay
             }
         }
-        lowest=tmp;
+        lowest=tmp
+        return tmp
     }
 
     //The subscription with the lowest cost
-    fun GetHighest(abo:AboViewModel){
+    fun GetHighest(abo:AboViewModel):Double{
         var tmp: Double = abo.costsPerDay
         list.forEach {
             if(tmp>it.costsPerDay){
@@ -57,15 +61,17 @@ class Calculator(abos: List<AboViewModel>) {
             }
         }
         highest=tmp
+        return tmp
     }
 
     //Average from all subscriptions
-    fun GetAverage(){
+    fun GetAverage():Double{
         var tmp:Double=0.0
         list.forEach {
             tmp+=it.costsPerDay
             }
         average=tmp/list.size
+        return tmp/list.size
     }
     //Percentile in a list from each subscription
     fun GetPercentages(abo:AboViewModel){
