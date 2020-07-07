@@ -51,7 +51,7 @@ fun AboControlEditScreen(viewModel: MainViewModel, scaffoldState: ScaffoldState 
                     Column {
                         Row() {
                             Text("Name:")
-                            TextField(value = nameState.value, onValueChange = { nameState.value = it })
+
                         }
                         Row() {
                             Text("Period:")
