@@ -25,7 +25,7 @@ fun AboControlScreen(viewModel: MainViewModel, scaffoldState: ScaffoldState = re
                   IconButton(onClick = {
                       Status.currentScreen = Screen.AboControlEdit(viewModel)
                   }) {
-                      Icon(vectorResource(R.drawable.ic_baseline_home_24))
+                      Icon(vectorResource(R.drawable.ic_baseline_plus_24))
                   }
               })
         },
