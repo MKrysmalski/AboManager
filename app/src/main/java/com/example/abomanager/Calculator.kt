@@ -9,9 +9,12 @@ class Calculator(abos: List<AboViewModel>) {
 
 
     //Even out the subscriptions
-    fun MakeEven(){
-        // Here should be even more gehirnschmalz
-        // costs / abo_variant = costs per day
+    fun TotalSumPerDay(){
+        var tmp:Double=0.0
+        list.forEach {
+            //Compare Highest with tmp
+            tmp+=it.costsPerDay;
+        }
     }
 
     //The cost from one subscription in the complete period
