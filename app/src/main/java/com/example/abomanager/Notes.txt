@@ -1,0 +1,1 @@
+- Calculator is not adding list items, UpdateList needs to be called
