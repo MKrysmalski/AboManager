@@ -32,6 +32,7 @@ private fun MainContent() {
                 is Screen.Profil -> ProfilScreen(screen.viewModel)
                 is Screen.AboControl -> AboControlScreen(screen.viewModel)
                 is Screen.Statistics -> StatisticsScreen(screen.viewModel)
+                is Screen.AboControlEdit -> AboControlEditScreen(screen.viewModel)
             }
         }
     }
