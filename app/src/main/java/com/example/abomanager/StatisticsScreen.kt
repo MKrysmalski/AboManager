@@ -22,6 +22,8 @@ import androidx.ui.unit.dp
 
 val navButtonPadding : Modifier = Modifier.padding(5.dp);
 
+
+
 @Composable
 fun StatisticsScreen(viewModel: MainViewModel, scaffoldState: ScaffoldState = remember { ScaffoldState() }) {
     Scaffold(
@@ -42,7 +44,7 @@ fun StatisticsScreen(viewModel: MainViewModel, scaffoldState: ScaffoldState = re
                         style = typography.h6,
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis)
-                    Text("Filler Text",
+                    Text(viewModel.stats.TotalSum.toString(),
                         style = typography.body2)
                     Text(
                         "Cost per Month:",

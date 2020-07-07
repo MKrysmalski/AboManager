@@ -43,7 +43,7 @@ fun AboControlEditScreen(viewModel: MainViewModel, scaffoldState: ScaffoldState 
                 ) {
                     Row() {
                         Text("Name:")
-                        TextField(value = , onValueChange = {tmpAbo.name = })
+
                     }
                 }
             }
