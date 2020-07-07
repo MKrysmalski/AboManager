@@ -5,6 +5,7 @@ class Calculator(abos: List<AboViewModel>) {
     var average: Double = 0.0
     var highest: Double = 0.0
     var lowest: Double = 0.0
+    var TotalSum:Double=0.0
 
 
 
@@ -15,6 +16,7 @@ class Calculator(abos: List<AboViewModel>) {
             //Compare Highest with tmp
             tmp+=it.costsPerDay;
         }
+        TotalSum=tmp;
     }
 
     //The cost from one subscription in the complete period
