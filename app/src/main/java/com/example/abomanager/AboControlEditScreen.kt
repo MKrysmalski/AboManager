@@ -6,6 +6,7 @@ import androidx.ui.core.Modifier
 import androidx.ui.foundation.Icon
 import androidx.ui.foundation.Text
 import androidx.ui.foundation.TextField
+import androidx.ui.foundation.TextFieldValue
 import androidx.ui.graphics.Color
 import androidx.ui.layout.Column
 import androidx.ui.layout.Row
@@ -19,8 +20,6 @@ import androidx.ui.unit.dp
 @Composable
 fun AboControlEditScreen(viewModel: MainViewModel, scaffoldState: ScaffoldState = remember { ScaffoldState() }) {
     var tmpAbo: AboViewModel
-    var tmpName = tmpName { "" }
-    var tmpCost = tmpCost { "" }
 
     Scaffold(
         scaffoldState = scaffoldState,
@@ -45,22 +44,10 @@ fun AboControlEditScreen(viewModel: MainViewModel, scaffoldState: ScaffoldState 
                 ) {
                     Row() {
                         Text("Name:")
-                        TextField(value = tmpName, onValueChange = { tmpName.value = it })
-                    }
-
-                    Row() {
-                        Text("Variant:")
-                        TextField(value = tmpName, onValueChange = { tmpName.value = it })
                     }
 
                     Row() {
                         Text("Cost:")
-                        TextField(value = tmpCost, onValueChange = { tmpName.value = it })
-                    }
-
-                    Row() {
-                        Text("Name:")
-                        TextField(value = tmpName, onValueChange = { tmpName.value = it })
                     }
                 }
             }
