@@ -2,10 +2,10 @@ package com.example.abomanager
 
 class Calculator(abos: List<AboViewModel>) {
     val list = abos
-    var average: Double = 0.0
-    var highest: Double = 0.0
-    var lowest: Double = 0.0
-    var TotalSum:Double=0.0
+    var average: Double = -1.0
+    var highest: Double = -1.0
+    var lowest: Double = -1.0
+    var TotalSum:Double=-1.0
 
 
 
