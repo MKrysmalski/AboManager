@@ -11,7 +11,10 @@ import androidx.ui.material.icons.filled.ArrowBack
 import androidx.ui.res.vectorResource
 
 @Composable
-fun ProfilScreen(viewModel: MainViewModel, scaffoldState: ScaffoldState = remember { ScaffoldState() }) {
+fun ProfilScreen(
+    viewModel: MainViewModel,
+    scaffoldState: ScaffoldState = remember { ScaffoldState() }
+) {
     Scaffold(
         scaffoldState = scaffoldState,
 

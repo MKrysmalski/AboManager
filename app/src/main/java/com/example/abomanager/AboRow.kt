@@ -15,33 +15,36 @@ import androidx.ui.unit.dp
 
 @Composable
 fun AboRow(abo: AboViewModel) {
-    Column(modifier = Modifier.padding(start= 16.dp, end= 16.dp).drawBackground(color = Color(parseColor(abo.color)))) {
+    Column(
+        modifier = Modifier.padding(start = 16.dp, end = 16.dp)
+            .drawBackground(color = Color(parseColor(abo.color)))
+    ) {
         Text(
             text = "Subscription: " + abo.name,
-            modifier = Modifier.padding(top= 4.dp),
+            modifier = Modifier.padding(top = 4.dp),
             style = MaterialTheme.typography.body1
         )
         Text(
             text = "Time Span: " + abo.abo_variant.toString(),
-            modifier = Modifier.padding(top= 4.dp),
+            modifier = Modifier.padding(top = 4.dp),
             style = MaterialTheme.typography.body1
         )
         Text(
             text = "Costs: " + abo.cost.toString(),
-            modifier = Modifier.padding(top= 4.dp),
+            modifier = Modifier.padding(top = 4.dp),
             style = MaterialTheme.typography.body1
         )
         Text(
             text = "Runtime: " + abo.run_time.toString(),
-            modifier = Modifier.padding(top= 4.dp),
+            modifier = Modifier.padding(top = 4.dp),
             style = MaterialTheme.typography.body1
         )
         Text(
             text = "Started: " + abo.starting_day.toString(),
-            modifier = Modifier.padding(top= 4.dp),
+            modifier = Modifier.padding(top = 4.dp),
             style = MaterialTheme.typography.body1
         )
-        Divider(Modifier.padding(top= 8.dp, bottom= 4.dp))
+        Divider(Modifier.padding(top = 8.dp, bottom = 4.dp))
     }
 }
 

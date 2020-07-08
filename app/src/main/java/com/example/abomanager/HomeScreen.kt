@@ -20,7 +20,10 @@ import androidx.ui.text.style.TextOverflow
 import androidx.ui.unit.dp
 
 @Composable
-fun HomeScreen(viewModel: MainViewModel, scaffoldState: ScaffoldState = remember { ScaffoldState() }) {
+fun HomeScreen(
+    viewModel: MainViewModel,
+    scaffoldState: ScaffoldState = remember { ScaffoldState() }
+) {
     Scaffold(
         scaffoldState = scaffoldState,
 
@@ -29,7 +32,7 @@ fun HomeScreen(viewModel: MainViewModel, scaffoldState: ScaffoldState = remember
         },
 
         bodyContent = {
-            Stack(modifier = Modifier.fillMaxSize().padding(8.dp)){
+            Stack(modifier = Modifier.fillMaxSize().padding(8.dp)) {
                 Text(text = "")
                 Column(Modifier.gravity(Alignment.BottomCenter)) {
                     Text("klasse");
@@ -38,18 +41,19 @@ fun HomeScreen(viewModel: MainViewModel, scaffoldState: ScaffoldState = remember
             MaterialTheme() {
                 val typography = MaterialTheme.typography
                 Column(
-                    modifier = Modifier.padding(1.dp,0.dp,0.dp,0.dp)
-                    ) {
-                        Text(
-                            "Cost per Month:",
-                            style = typography.h6,
-                            maxLines = 1,
-                            overflow = TextOverflow.Ellipsis
-                        )
-                        Text("Filler Text",
-                            style = typography.body2
-                        )
-                    }
+                    modifier = Modifier.padding(1.dp, 0.dp, 0.dp, 0.dp)
+                ) {
+                    Text(
+                        "Cost per Month:",
+                        style = typography.h6,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis
+                    )
+                    Text(
+                        "Filler Text",
+                        style = typography.body2
+                    )
+                }
             }
         },
         bottomAppBar = {

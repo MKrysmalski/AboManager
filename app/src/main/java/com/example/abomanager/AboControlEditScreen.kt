@@ -16,8 +16,12 @@ import androidx.ui.material.icons.filled.ArrowBack
 import androidx.ui.res.vectorResource
 import androidx.ui.unit.dp
 import java.util.*
+
 @Composable
-fun AboControlEditScreen(viewModel: MainViewModel, scaffoldState: ScaffoldState = remember { ScaffoldState() }) {
+fun AboControlEditScreen(
+    viewModel: MainViewModel,
+    scaffoldState: ScaffoldState = remember { ScaffoldState() }
+) {
     val tmpAbo: AboViewModel = AboViewModel("")
     val nameState = state { TextFieldValue("Name Here") }
     val periodState = state { TextFieldValue("PeriodTime Here") }
@@ -50,19 +54,21 @@ fun AboControlEditScreen(viewModel: MainViewModel, scaffoldState: ScaffoldState 
                     Column {
 
                         Row() {
-                            Text("Name: "+ nameState.value.text)
+                            Text("Name: " + nameState.value.text)
                         }
-                        TextField(value = nameState.value, onValueChange ={nameState.value=it} )
+                        TextField(value = nameState.value, onValueChange = { nameState.value = it })
                         Row() {
                             Text("Period:" + periodState.value.text)
                         }
-                        TextField(value = periodState.value, onValueChange = { periodState.value = it })
+                        TextField(
+                            value = periodState.value,
+                            onValueChange = { periodState.value = it })
                         Row() {
                             Text("Cost:" + periodState.value.text)
                         }
                         TextField(value = costState.value, onValueChange = { costState.value = it })
                         Row() {
-                            Text("Starts:" )
+                            Text("Starts:")
                         }
                         Row() {
                             Text("Time span:")
@@ -88,9 +94,9 @@ fun AboControlEditScreen(viewModel: MainViewModel, scaffoldState: ScaffoldState 
                         }
                         Modifier.padding(15.dp)
                         Button(onClick = {
-                            tmpAbo.name=nameState.value.text
-                            tmpAbo.cost=costState.value.text.toDouble()
-                            tmpAbo.abo_variant=periodState.value.text.toInt()
+                            tmpAbo.name = nameState.value.text
+                            tmpAbo.cost = costState.value.text.toDouble()
+                            tmpAbo.abo_variant = periodState.value.text.toInt()
                             SubmitAbo(tmpAbo)
                         }, backgroundColor = Color.White) {
                             Icon(vectorResource(R.drawable.ic_baseline_account_circle_24))
@@ -102,7 +108,7 @@ fun AboControlEditScreen(viewModel: MainViewModel, scaffoldState: ScaffoldState 
     )
 }
 
-fun ResetTemplate(abo: AboViewModel){
+fun ResetTemplate(abo: AboViewModel) {
     abo.name = "Name Here"
     abo.abo_variant = 30
     abo.cost = 0.0
@@ -111,6 +117,6 @@ fun ResetTemplate(abo: AboViewModel){
     abo.color = "#FFFFFF"
 }
 
-fun SubmitAbo(abo: AboViewModel){
+fun SubmitAbo(abo: AboViewModel) {
 
 }

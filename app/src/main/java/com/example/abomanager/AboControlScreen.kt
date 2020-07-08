@@ -14,20 +14,23 @@ import androidx.ui.material.icons.filled.ArrowBack
 import androidx.ui.res.vectorResource
 
 @Composable
-fun AboControlScreen(viewModel: MainViewModel, scaffoldState: ScaffoldState = remember { ScaffoldState() }) {
+fun AboControlScreen(
+    viewModel: MainViewModel,
+    scaffoldState: ScaffoldState = remember { ScaffoldState() }
+) {
     Scaffold(
         scaffoldState = scaffoldState,
 
         topAppBar = {
-          TopAppBar(
-              title = { Text("Subscriptions") },
-              navigationIcon = {
-                  IconButton(onClick = {
-                      Status.currentScreen = Screen.AboControlEdit(viewModel)
-                  }) {
-                      Icon(vectorResource(R.drawable.ic_baseline_plus_24))
-                  }
-              })
+            TopAppBar(
+                title = { Text("Subscriptions") },
+                navigationIcon = {
+                    IconButton(onClick = {
+                        Status.currentScreen = Screen.AboControlEdit(viewModel)
+                    }) {
+                        Icon(vectorResource(R.drawable.ic_baseline_plus_24))
+                    }
+                })
         },
 
         bodyContent = {

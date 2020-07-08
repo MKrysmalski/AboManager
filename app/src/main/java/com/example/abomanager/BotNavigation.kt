@@ -17,24 +17,25 @@ import androidx.ui.unit.dp
 @Composable
 fun BotNavigation(vModel: MainViewModel) {
     BottomAppBar(
-        backgroundColor = Color.DarkGray) {
+        backgroundColor = Color.DarkGray
+    ) {
         Button(onClick = {
-            Status.currentScreen=Screen.Home(vModel)
-        }, modifier = navButtonPadding, backgroundColor = Color.White){
+            Status.currentScreen = Screen.Home(vModel)
+        }, modifier = navButtonPadding, backgroundColor = Color.White) {
             Icon(vectorResource(R.drawable.ic_baseline_home_24))
         }
         Button(onClick = {
-            Status.currentScreen=Screen.AboControl(vModel)
+            Status.currentScreen = Screen.AboControl(vModel)
         }, modifier = navButtonPadding, backgroundColor = Color.White) {
             Icon(vectorResource(R.drawable.ic_baseline_view_list_24))
         }
         Button(onClick = {
-            Status.currentScreen=Screen.Profil(vModel)
+            Status.currentScreen = Screen.Profil(vModel)
         }, modifier = navButtonPadding, backgroundColor = Color.White) {
             Icon(vectorResource(R.drawable.ic_baseline_account_circle_24))
         }
         Button(onClick = {
-            Status.currentScreen=Screen.Statistics(vModel)
+            Status.currentScreen = Screen.Statistics(vModel)
         }, modifier = navButtonPadding, backgroundColor = Color.White) {
             Icon(vectorResource(R.drawable.ic_baseline_bar_chart_24))
         }
